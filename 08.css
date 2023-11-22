@@ -1,0 +1,91 @@
+/* 載入字型 */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700&display=swap&subset=chinese-traditional");
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+html,body {
+    height: 100%;
+}
+.body {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+}
+.wrapper {
+    width: 1200px;
+    display: flex;
+    align-self: stretch;
+    margin: auto;
+}
+.item {
+    width: 400px;
+    margin: 15px;
+    text-align: center;
+    background-color: #eaeaea;
+    /* border: 1px solid #ccc; */
+    transform: translateY(0px);
+    transition: .5s;
+}
+.item-photo {
+    width: 100%;
+    vertical-align: middle;
+}
+/* .item-photo-1 {
+    background-image: url(download/nifi);
+}
+.item-photo-2 {
+    background-image: url(download/pufu);
+}
+.item-photo-3 {
+    background-image: url(download/yupi);
+} */
+.title {
+    border-bottom: 1px solid #888;
+    padding-bottom: .3em;
+    margin-bottom: .4em;
+    font-weight: 700;
+    transition: .1s;
+}
+.description {
+    line-height: 1.6;
+    font-weight: 300;
+    transition: .1s;
+}
+.item .text {
+    padding: 20px;
+    position: relative;
+}
+.item .text:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-top: 50px solid transparent;
+    border-left: 184.5px solid #eaeaea;
+    border-right: 184.5px solid #eaeaea;
+    transform: translateY(-100%);
+}
+.item:hover {
+    transform: translateY(-50px);
+}
+.item:hover .text{
+    background-image: linear-gradient(0deg,#fb8076, #feb85d);
+}
+.item:hover .text:before {
+    border-left: 184.5px solid #feb85d;
+    border-right: 184.5px solid #feb85d;
+}
+.item:hover h2 {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+.item:hover p{
+    color: #fff;
+}
